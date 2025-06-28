@@ -1,0 +1,106 @@
+.diseases-container {
+  max-width: 960px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8fcf7;
+}
+
+.page-title {
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.title-underline {
+  width: 70%;
+  height: 3px;
+  background-color: #4CAF50;
+  margin: 0 auto 30px;
+  border: none;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.disease-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.disease-card {
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  border-radius: 10px;
+  padding: 18px 22px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.disease-card::after {
+  content: "→";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.3s ease;
+  font-size: 20px;
+  color: #388e3c;
+}
+
+.disease-card:hover {
+  background-color: #c8e6c9;
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 128, 0, 0.1);
+}
+
+.disease-card:hover::after {
+  opacity: 1;
+  right: 15px;
+}
+
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-bar input {
+    width: 90%;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+}

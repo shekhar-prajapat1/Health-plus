@@ -1,0 +1,131 @@
+/* Chat Toggle Button */
+.chat-toggle-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #1a8efd;
+  color: white;
+  border-radius: 50%;
+  padding: 16px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.chat-toggle-btn:hover {
+  background-color: #0f6cd8;
+}
+
+/* Chat Box Container */
+.chat-box {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+/* Open state styling */
+.chat-box.open {
+  width: 400px;
+  height: 520px;
+  opacity: 1;
+}
+
+/* Chat Header */
+.chat-header {
+  background-color: #1a8efd;
+  color: white;
+  padding: 14px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* Chat Body */
+.chat-body {
+  flex: 1;
+  padding: 14px;
+  overflow-y: auto;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Chat Messages */
+.chat-message {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.chat-message.user {
+  background-color: #d1eaff;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.chat-message.ai {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Chat Footer */
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+
+.chat-footer button {
+  padding: 10px 14px;
+  background-color: #1a8efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-footer button:hover {
+  background-color: #0f6cd8;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .chat-box.open {
+    width: 90%;
+    right: 5%;
+    height: 500px;
+  }
+
+  .chat-toggle-btn {
+    bottom: 16px;
+    right: 16px;
+  }
+}

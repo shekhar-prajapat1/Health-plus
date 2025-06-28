@@ -1,0 +1,141 @@
+.about-section {
+  padding: 48px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  background: linear-gradient(to right, #e6f4ec, #f7fcf9); /* soft green gradient */
+  flex-wrap: wrap;
+}
+
+/* Image Container */
+.about-image-content {
+  flex: 1 1 400px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.about-image1 {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 128, 0, 0.1);
+}
+
+/* Text Content */
+.about-text-content {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.about-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #2f8a49; /* Holistic green */
+  margin-bottom: 24px;
+}
+
+.about-title > span {
+  position: relative;
+  display: inline-block;
+}
+
+.about-title span::before {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 4px;
+  background-color: #2f8a49;
+  border-radius: 8px;
+  left: 0;
+  bottom: -10px;
+}
+
+.about-sign {
+  color: #4ac16d; /* Lighter green for "+" */
+  font-family: Cambria, serif;
+  font-size: 44px;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+.about-description {
+  margin: 24px 0 40px;
+  color: #444;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  line-height: 1.8rem;
+}
+
+/* Subheading */
+.about-text-title {
+  margin-bottom: 20px;
+  color: #1b4d3e;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+}
+
+/* Steps (SolutionStep) */
+.about-text-step {
+  margin-bottom: 24px;
+}
+
+.about-text-sTitle {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2f8a49;
+  letter-spacing: 0.6px;
+  margin-bottom: 8px;
+}
+
+.about-text-description {
+  margin-left: 16px;
+  color: #444;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.6rem;
+}
+
+.fa-icon {
+  color: #4ac16d;
+  margin-right: 8px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding: 32px 16px;
+  }
+
+  .about-image1 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .about-description,
+  .about-text-description {
+    font-size: 16px;
+  }
+
+  .about-text-content {
+    text-align: center;
+  }
+
+  .about-text-sTitle,
+  .about-text-description {
+    margin-left: 0;
+  }
+}

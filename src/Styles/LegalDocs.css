@@ -1,0 +1,100 @@
+/* === Legal Section: Layout & Background === */
+.legal-text-content {
+  padding: 24px 32px;
+  background: linear-gradient(to right, #e8f5e9, #f1f8e9); /* soft wellness green */
+  border-top: 2px solid #a5d6a7;
+}
+
+/* === Site Title === */
+.legal-siteTitle {
+  padding: 16px 0;
+  text-align: center;
+  background-color: #ffffff;
+  border-bottom: 2px solid #c8e6c9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.legal-siteTitle a {
+  text-decoration: none;
+  font-size: 48px;
+  font-weight: bold;
+  color: #2e7d32; /* deep green tone */
+  letter-spacing: 0.8px;
+  transition: color 0.3s ease;
+}
+
+.legal-siteTitle a:hover {
+  color: #388e3c;
+}
+
+.legal-siteSign {
+  font-family: Cambria, serif;
+  font-size: 56px;
+  color: #43a047; /* accent green */
+  font-weight: bold;
+}
+
+/* === Section Title === */
+.legal-title {
+  margin: 24px 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #81c784;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2e7d32;
+  letter-spacing: 0.8px;
+}
+
+/* === Section Description === */
+.legal-description {
+  margin-bottom: 24px;
+  color: #424242;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  line-height: 1.8rem;
+  letter-spacing: 0.8px;
+}
+
+/* === Footer === */
+.legal-footer {
+  padding: 24px 40px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  line-height: 1.6rem;
+  border-top: 2px solid #a5d6a7;
+}
+
+/* === Responsive Adjustments === */
+@media screen and (max-width: 600px) {
+  .legal-text-content {
+    padding: 24px 16px;
+  }
+
+  .legal-title {
+    font-size: 24px;
+  }
+
+  .legal-description {
+    font-size: 16px;
+    line-height: 1.6rem;
+  }
+
+  .legal-footer {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .legal-siteTitle a {
+    font-size: 36px;
+  }
+
+  .legal-siteSign {
+    font-size: 44px;
+  }
+}
