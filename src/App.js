@@ -1,7 +1,8 @@
 // File: App.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+
 import Home from "./Pages/Home";
 import Legal from "./Pages/Legal";
 import NotFound from "./Pages/NotFound";
@@ -13,7 +14,7 @@ import DiseaseDetails from "./Pages/DiseaseDetails";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/legal" element={<Legal />} />
@@ -24,7 +25,7 @@ function App() {
           <Route path="/disease/:name" element={<DiseaseDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }
