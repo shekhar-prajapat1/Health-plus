@@ -2,19 +2,15 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCommentDots,
   faBars,
   faXmark,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
-import LiveChat from "./LiveChat"; // ✅ Import AI Chat Component
 
 function Navbar() {
   const [nav, setNav] = useState(false);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
@@ -29,16 +25,6 @@ function Navbar() {
 
   const handleSearchKeyDown = (e) => {
     if (e.key === "Enter") handleSearch();
-  };
-
-  const handleChatBtnClick = () => {
-    if (!isButtonDisabled) {
-      toast.info("Opening Live Chat...", {
-        position: toast.POSITION.TOP_CENTER,
-        onOpen: () => setIsButtonDisabled(true),
-        onClose: () => setIsButtonDisabled(false),
-      });
-    }
   };
 
   return (
@@ -77,15 +63,6 @@ function Navbar() {
           />
         </div>
 
-        {/* 💬 Live Chat Button */}
-        <button
-          className="navbar-btn"
-          onClick={handleChatBtnClick}
-          disabled={isButtonDisabled}
-        >
-          <FontAwesomeIcon icon={faCommentDots} /> Live Chat
-        </button>
-
         {/* 📱 Mobile Nav Overlay */}
         <div className={`mobile-navbar ${nav ? "open-nav" : ""}`}>
           <div className="mobile-navbar-close" onClick={toggleNav}>
@@ -111,9 +88,6 @@ function Navbar() {
           />
         </div>
       </nav>
-
-      {/* ✅ AI Live Chat Widget */}
-      <LiveChat />
     </>
   );
 }

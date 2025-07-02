@@ -9,7 +9,6 @@ import Appointment from "./Pages/Appointment";
 import SearchResults from "./Pages/SearchResults";
 import Diseases from "./Pages/Diseases";
 import DiseaseDetails from "./Pages/DiseaseDetails";
-import LiveChat from "./Components/LiveChat"; // ✅ Import
 
 function App() {
   return (
@@ -26,9 +25,6 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
-
-      {/* ✅ Use the component so it's not "unused" */}
-      <LiveChat />
     </div>
   );
 }
