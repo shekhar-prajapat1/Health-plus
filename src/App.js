@@ -13,7 +13,7 @@ import DiseaseDetails from "./Pages/DiseaseDetails";
 function App() {
   return (
     <div className="App">
-      <Router basename="/Health-Plus">
+      <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/legal" element={<Legal />} />
